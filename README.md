@@ -1,10 +1,9 @@
-## Tiny Reflow Controller V3
+## Tiny Reflow Controller V4
 
-The key part of the code in this repository is based on Rocket Scream's TinyReflowController, however this is not a fork, it has been complete rewrite to suit my own build of [a solder reflow hot plate](https://www.e-tinkers.com/2021/07/converting-uyue-preheater-into-a-solder-reflow-hot-plate/). A few libraries used for the firmware are also different from what Rocket Scream used for various reasons.
+The key part of the code in this repository is based on Rocket Scream's TinyReflowController and [a solder reflow hot plate](https://www.e-tinkers.com/2021/07/converting-uyue-preheater-into-a-solder-reflow-hot-plate/). 
 
-I didn't use the Rocket Scream's TinyReflow Controller hardware neither, instead I built an Arduino shield which hosts a 1.3" SH-1106-based OLED (which is different from Rocket Scream's 0.96" dual-color OLED), with an external MAX31855 breakout board, plus all the necessary control circuitry soldered on a 6x8cm prototyping board. An Arduino Leonardo was used as the MCU.
+I didn't use the Rocket Scream's TinyReflow Controller hardware neither, instead I built based on [ElectroNoobs](https://electronoobs.com/eng_arduino_tut161.php) design. An Arduino nano, an LCD 16x2, an SSR, and a Thermisthor. 
 
-A [UYue 946-1010](https://github.com/e-tinkers/TinyReflowControllerV3/blob/master/resources/UYue_946-1010.jpg) Preheater Station is reconfigured by replacing preheater's original controller board with the self-build controller. The idea of hacking a UYue Preheater was inspired by [DigiCool Things' youtube videos](https://youtu.be/ZxsIIwjR5n8).
 
 > ## Disclaimer
 > Dealing with high voltage is a very dangerous act! Please make sure you know what you are dealing with and have proper knowledge before hand. Your use of any information or materials on this Tiny Reflow Controller is entirely at your own risk, for which we shall not be liable.
@@ -17,7 +16,6 @@ The firmware has the dependencies of several Arduino Libraries, if you are using
   - [Button Arduino Library](https://github.com/e-tinkers/button)
   - [MAX31855 Arduino Library](https://github.com/e-tinkers/MAX31855)
 
-If you are using Arduino IDE, you will have to download and install the libraries via Library Manager or using git clone, or directly download from the respective github repository.
 
 ## Schematic
 The interconnection of various parts is outlined in [schematic](https://github.com/e-tinkers/TinyReflowControllerV3/blob/master/resources/TinyReflowControllerV3.pdf). The Solid State Relay and Thermocouple are re-used with the parts that came with the UYue Preheater.
@@ -26,7 +24,4 @@ The interconnection of various parts is outlined in [schematic](https://github.c
 
 This Tiny Reflow Controller hardware and firmware are released under the [Creative Commons Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/). You are free to take this piece of code, use it and modify it. All we ask is attribution including the supporting libraries used in this firmware.
 
-## Others
-This firmware has also been tested on an E-Tinkers' [ATtiny3217 Dev Board](https://github.com/e-tinkers/attiny3217) running on [megaTinyCore](https://github.com/SpenceKonde/megaTinyCore).
 
-Further detail description on how to build the solder reflow hot-plate can be found at [e-tinkers.com](https://www.e-tinkers.com/2021/07/converting-uyue-preheater-into-a-solder-reflow-hot-plate/).
